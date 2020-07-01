@@ -1,0 +1,124 @@
+.header-top {
+	position: relative;
+	height: calc(75vh - 66px);
+	width: 100%;
+	overflow: hidden;
+	@media screen and (min-width: 576px) {
+		height: calc(100vh - 72px);
+	}
+	.header-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		filter: brightness(50%);
+	}
+	.header-avatar {
+		display: none;
+		@media screen and (min-width: 576px) {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 10%;
+			height: 90%;
+			animation-delay: 1s;
+			&.loaded {
+				animation: 0.8s load;
+			}
+		}
+	}
+	.header-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		color: white;
+		@media screen and (min-width: 576px) {
+			top: 50%;
+			width: 100%;
+			left: auto;
+			right: 15%;
+			max-width: 30%;
+			transform: translate(0, -50%);
+		}
+		h1 {
+			letter-spacing: 1px;
+			line-height: 3.3rem;
+			font-size: 3rem;
+			position: relative;
+			@media screen and (min-width: 576px) {
+				font-size: 5.5rem;
+				line-height: 5.5rem;
+				transform: translateX(200%);
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -6%;
+				left: 5px;
+				width: 30%;
+				border-bottom: 4px solid #e65e21;
+			}
+		}
+		.subtitle {
+			color: white;
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2rem;
+			animation-delay: 0.1s;
+			transform: translateX(200%);
+			@media screen and (min-width: 576px) {
+				font-size: 2.625rem;
+				line-height: 63px;
+				animation-delay: 0.5s;
+			}
+		}
+		.btn {
+			border-radius: 25px;
+			padding: 10px 20px;
+			animation-delay: 0.2s;
+			transform: translateX(200%);
+			box-shadow: none;
+			@media screen and (min-width: 576px) {
+				animation-delay: 0.7s;
+			}
+		}
+	}
+	.scroll-icon {
+		position: absolute;
+		bottom: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.fadeFromRight {
+	animation: 1s fade both;
+}
+
+@keyframes load {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.05);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	80% {
+		transform: scale(1);
+	}
+}
+
+@keyframes fade {
+	from {
+		transform: translateX(1000px);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

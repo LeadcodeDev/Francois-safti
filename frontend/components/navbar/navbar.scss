@@ -1,0 +1,57 @@
+.navbar {
+    line-height: 40px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    background-color: white;
+
+    .navbar-brand {
+        color: #e65e21;
+    }
+
+    .container-fluid {
+        @media screen and (min-width: 576px) {
+            width: 80%;
+            margin: auto;
+        }
+
+        .btn {
+            border-radius: 25px;
+            box-shadow: none;
+
+            @media screen and (min-width: 576px) {
+                animation-delay: 0.7s;
+            }
+        }
+
+        .search-bar {
+            display: inline-block;
+            border: 1px solid #eeeeee;
+            border-radius: 30px;
+            padding: 0 20px 1px;
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+
+            input {
+                border: none;
+
+                &:focus {
+                    outline-offset: 0;
+                    outline: none !important;
+                    box-shadow: none;
+                }
+            }
+
+            .btn {
+                padding: 0;
+                background-color: initial;
+                border: none;
+                color: rgb(129, 131, 133);
+            }
+        }
+    }
+}

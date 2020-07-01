@@ -1,0 +1,43 @@
+.scroll-icon {
+	animation: 3s reveal;
+	.contour {
+		position: relative;
+		height: 60px;
+		width: 30px;
+		border: 1px solid rgb(226, 226, 226);
+		border-radius: 16px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 75%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			background-color: rgb(226, 226, 226);
+			animation: 1s move infinite;
+		}
+	}
+}
+
+@keyframes reveal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes move {
+	0% {
+		top: 75%;
+	}
+	20% {
+		top: 25%;
+	}
+	100% {
+		top: 75%;
+	}
+}
