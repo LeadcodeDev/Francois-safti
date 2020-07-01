@@ -23,16 +23,6 @@
 				<b-navbar-nav class="mx-2">
 					<nuxt-link to="" class="btn btn-primary">Contactez-moi</nuxt-link>
 				</b-navbar-nav>
-
-				<b-navbar-nav>
-					<b-nav-item-dropdown right>
-						<template v-slot:button-content>
-							<em>User</em>
-						</template>
-						<b-dropdown-item href="#">Profile</b-dropdown-item>
-						<b-dropdown-item href="#">Sign Out</b-dropdown-item>
-					</b-nav-item-dropdown>
-				</b-navbar-nav>
 			</b-collapse>
 		</div>
 	</b-navbar>

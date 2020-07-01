@@ -20,8 +20,9 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import './routes/ProductRoutes'
+import './routes/UsersRoutes'
 
 Route.group(() => {
-	Route.post('/', 'UsersController.register')
-	Route.get('/auth', 'UsersController.auth')
-}).prefix('/api/users')
+	Route.post('/login', 'AuthController.login')
+	Route.get('/logout', 'AuthController.logout')
+}).prefix('/api/authentication')

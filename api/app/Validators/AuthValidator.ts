@@ -6,8 +6,7 @@ export default class AuthValidator {
 
 	public schema = schema.create({
 		email: schema.string({ trim: true }, [rules.email()]),
-		password: schema.string({ trim: true }),
-		remember_user: schema.boolean()
+		password: schema.string({ trim: true })
 	})
 
 	public cacheKey = this.ctx.routeKey

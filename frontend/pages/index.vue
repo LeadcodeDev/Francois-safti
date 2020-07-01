@@ -13,6 +13,8 @@
 		<div class="container">
 			<product limit="6" title="Les biens en ma possession"></product>
 		</div>
+		<notice></notice>
+
 		<footer-bottom></footer-bottom>
 	</div>
 </template>
@@ -24,6 +26,7 @@ import Social from '../components/social/Social.vue'
 import Value from '../components/value/Value.vue'
 import Slogan from '../components/slogan/Slogan.vue'
 import Product from '../components/product/Product.vue'
+import Notice from '../components/notice/Notice.vue'
 
 export default {
 	layout: 'master',
@@ -33,7 +36,8 @@ export default {
 		social: Social,
 		value: Value,
 		slogan: Slogan,
-		product: Product
+		product: Product,
+		notice: Notice
 	}
 }
 </script>
