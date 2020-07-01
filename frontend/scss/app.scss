@@ -38,6 +38,10 @@ h2 {
 	}
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 .btn {
 	&-primary {
 		@include basicColor(#e65e21);

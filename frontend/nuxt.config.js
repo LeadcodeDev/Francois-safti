@@ -26,12 +26,18 @@ export default {
 	 ** Plugins to load before mounting the App
 	 ** https://nuxtjs.org/guide/plugins
 	 */
-	plugins: [],
+	plugins: [{ src: '~/plugins/localStorage.js', ssr: false }],
 	/*
 	 ** Auto import components
 	 ** See https://nuxtjs.org/api/configuration-components
 	 */
 	components: true,
+
+	/**
+	 * Router properties
+	 * See https://fr.nuxtjs.org/guide/routing#middleware
+	 */
+	router: {},
 
 	/**
 	 * Pages transition

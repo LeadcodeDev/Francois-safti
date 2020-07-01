@@ -5,5 +5,6 @@
 	"scripts": {
 		"front": "cd ./frontend && yarn dev",
 		"api": "cd ./api && yarn start"
-	}
+	},
+	"dependencies": {}
 }

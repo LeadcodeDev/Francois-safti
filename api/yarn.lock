@@ -216,6 +216,16 @@
     cuid "^2.1.8"
     jest-worker "^26.0.0"
 
+"@adonisjs/session@^3.0.4":
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@adonisjs/session/-/session-3.0.4.tgz#fb14fba61e46154ac2e311a55896788cb7ae1329"
+  integrity sha512-L5V8u+ZJEo6ppWEPjTFC+VTvUNaDxs1jvky5LHkZofB9Ry/u51qqWtOBCqC+zCcP7UyxrzM2HKLm6uj0JDjn4w==
+  dependencies:
+    "@poppinss/utils" "^2.2.7"
+    cuid "^2.1.8"
+    fs-extra "^9.0.1"
+    ms "^2.1.2"
+
 "@adonisjs/sink@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@adonisjs/sink/-/sink-3.0.2.tgz#a3dd6dff30ae53a578f7bb7f61ed738ba9981253"
@@ -338,6 +348,18 @@
   integrity sha512-kEfYBk1nZ4MAgUkIElYqXe6a7RCSqXOBrsv7/ecruBBb9dXLFcA24nIfLfOZVUZ0Sv0Rh8oNQs1W9RrI0YV2tg==
   dependencies:
     "@hapi/bourne" "^2.0.0"
+    fs-readdir-recursive "^1.1.0"
+    ms "^2.1.2"
+    require-all "^3.0.0"
+    resolve-from "^5.0.0"
+
+"@poppinss/utils@^2.2.7":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@poppinss/utils/-/utils-2.2.7.tgz#709c3c45a4474627fdf17a16accdddd93a8e3370"
+  integrity sha512-ZykSMAGCQvo3JThhtCdV/YCvLpAHDDQ487+HQo8znGg/NNI7UGmrkrvqifUWmyzKeJzolJPiyhZgjmzif+Xwxw==
+  dependencies:
+    "@hapi/bourne" "^2.0.0"
+    buffer-alloc "^1.2.0"
     fs-readdir-recursive "^1.1.0"
     ms "^2.1.2"
     require-all "^3.0.0"
@@ -698,6 +720,24 @@ braces@~3.0.2:
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   dependencies:
     fill-range "^7.0.1"
+
+buffer-alloc-unsafe@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
+  integrity sha512-TEM2iMIEQdJ2yjPJoSIsldnleVaAk1oW3DBVUykyOLsEsFmEc9kn+SFFPz+gl54KQNxlDnAwCXosOS9Okx2xAg==
+
+buffer-alloc@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/buffer-alloc/-/buffer-alloc-1.2.0.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
+  integrity sha512-CFsHQgjtW1UChdXgbyJGtnm+O/uLQeZdtbDo8mfUgYXCHSM1wgrVxXm6bSyrUuErEb+4sYVGCzASBRot7zyrow==
+  dependencies:
+    buffer-alloc-unsafe "^1.1.0"
+    buffer-fill "^1.0.0"
+
+buffer-fill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
+  integrity sha1-+PeLdniYiO858gXNY39o5wISKyw=
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1435,7 +1475,7 @@ fs-extra@^8.1.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^9.0.0:
+fs-extra@^9.0.0, fs-extra@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
   integrity sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==

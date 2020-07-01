@@ -46,14 +46,6 @@ export default {
 			}
 		}
 	},
-	components: {
-		'header-top': Header,
-		'footer-bottom': Footer,
-		social: Social,
-		value: Value,
-		slogan: Slogan,
-		product: Product
-	},
 	methods: {
 		onSlideStart(slide) {
 			this.sliding = true
@@ -61,6 +53,14 @@ export default {
 		onSlideEnd(slide) {
 			this.sliding = false
 		}
+	},
+	components: {
+		'header-top': Header,
+		'footer-bottom': Footer,
+		social: Social,
+		value: Value,
+		slogan: Slogan,
+		product: Product
 	}
 }
 </script>
