@@ -38,16 +38,12 @@ export default {
 	},
 	methods: {
 		logout: async function () {
-			this.$store.commit('authentication/remove')
+			this.$store.commit('auth/remove')
 		},
 		handleSubmit: async function () {
 			const { status, data } = await Axios.post('http://localhost:3333/api/authentication/login', this.form, { withCredentials: true })
 			if (status === 200) {
-				console.log(data)
-				this.$store.commit('authentication/set', {
-					user: data,
-					isLogin: true
-				})
+				this.$store.commit('auth/set', { user: data, logged: true })
 				this.$router.push('/')
 			}
 		}

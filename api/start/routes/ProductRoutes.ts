@@ -66,12 +66,13 @@ Route.group(() => {
 			destroy: ['auth']
 		})
 
-	Route.resource('types-transactions', 'TypesOfTransactionsController')
+	Route.resource('types-transactions', 'products/TypesOfTransactionsController')
 		.except(['create', 'edit'])
 		.apiOnly()
 		.middleware({
 			index: ['auth'],
 			store: ['auth'],
+			update: ['auth'],
 			show: ['auth'],
 			destroy: ['auth']
 		})

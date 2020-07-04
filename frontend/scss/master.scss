@@ -42,6 +42,35 @@ a:hover {
 	text-decoration: none;
 }
 
+.search-bar {
+	display: inline-flex;
+	border: 1px solid #eeeeee;
+	border-radius: 30px;
+	padding: 0 20px 1px;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	background-color: white;
+
+	input {
+		border: none;
+
+		&:focus {
+			outline-offset: 0;
+			outline: none !important;
+			box-shadow: none;
+		}
+	}
+
+	.btn {
+		padding: 0;
+		background-color: initial;
+		border: none;
+		color: rgb(129, 131, 133);
+	}
+}
+
 .btn {
 	&-primary {
 		@include basicColor(#e65e21);
@@ -53,6 +82,9 @@ a:hover {
 
 		&:focus {
 			box-shadow: none;
+			@include darkenColor(#e65e21);
+			background-color: darken(#e65e21, 10%);
+			color: white;
 		}
 
 		&:hover {
@@ -80,6 +112,7 @@ a:hover {
 .page-leave-active {
 	transition: opacity 0.1s;
 }
+
 .page-enter,
 .page-leave-active {
 	opacity: 0;

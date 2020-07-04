@@ -5,6 +5,14 @@ export default {
 	 */
 	mode: 'universal',
 	/*
+	 ** Nuxt environment settings
+	 ** See https://fr.nuxtjs.org/api/configuration-env/
+	 */
+	env: {
+		api: process.env.NODE_ENV === 'dev' ? 'http://localhost:3333/api' : 'https://my-domain.com'
+	},
+
+	/*
 	 ** Nuxt target
 	 ** See https://nuxtjs.org/api/configuration-target
 	 */
@@ -55,8 +63,17 @@ export default {
 		// Doc: https://bootstrap-vue.js.org
 		'bootstrap-vue/nuxt',
 		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios'
+		'@nuxtjs/axios',
+		// Doc : https://github.com/nuxt-community/modules/tree/master/packages/toast
+		'@nuxtjs/toast'
 	],
+	/**
+	 ** Toast module settings
+	 */
+	toast: {
+		position: 'bottom-left',
+		duration: 5000
+	},
 	/*
 	 ** Axios module configuration
 	 ** See https://axios.nuxtjs.org/options

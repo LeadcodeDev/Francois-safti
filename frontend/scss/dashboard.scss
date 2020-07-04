@@ -1,0 +1,108 @@
+@mixin basicColor($color) {
+    background-color: $color;
+    border-color: $color;
+}
+
+@mixin darkenColor($color) {
+    border-color: darken($color, 10%);
+    color: darken($color, 10%);
+}
+
+html {
+    font-size: 16px;
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    position: relative;
+    width: fit-content;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -10%;
+        left: 5px;
+        width: 30%;
+        border-bottom: 4px solid #e65e21;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    &-primary {
+        @include basicColor(#e65e21);
+
+        &:active,
+        &:visited {
+            @include basicColor(#e65e21);
+        }
+
+        &:focus {
+            box-shadow: none;
+            @include darkenColor(#e65e21);
+            background-color: darken(#e65e21, 10%);
+            color: white;
+        }
+
+        &:hover {
+            @include darkenColor(#e65e21);
+            background-color: darken(#e65e21, 10%);
+            color: white;
+        }
+    }
+
+    &-outline-primary {
+        @include darkenColor(#e65e21);
+
+        &:hover {
+            @include basicColor(#e65e21);
+            color: white;
+        }
+    }
+}
+
+.sm-order-1 {
+    order: 1;
+}
+
+.sm-order-2 {
+    order: 2;
+}
+
+@media screen and (min-width: 576px) {
+    .sm-order-1 {
+        order: initial;
+    }
+
+    .sm-order-2 {
+        order: initial;
+    }
+}
+
+.text-primary {
+    color: #e65e21 !important;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.1s;
+}
+
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+}

@@ -4,10 +4,11 @@
 			<b-row class="py-5">
 				<b-col md-5>
 					<div v-if="auth">
+						<nuxt-link to="/administration">Tableau de bord</nuxt-link>
 						<a href="" @click.prevent="logout">Logout</a>
-						<nuxt-link to="/admin">Tableau de bord</nuxt-link>
 					</div>
 					<nuxt-link v-else to="/login">Connexion</nuxt-link>
+					{{ this.$store.state.auth.member.logged }}
 				</b-col>
 				<b-col md-5>d</b-col>
 			</b-row>
@@ -21,12 +22,13 @@ export default {
 	name: 'Footer',
 	computed: {
 		auth() {
-			return this.$store.state.authentication.auth.isLogin
+			console.log(this.$store.state.auth.member)
+			return this.$store.state.auth.member.logged
 		}
 	},
 	methods: {
-		logout: async function () {
-			this.$store.commit('authentication/remove')
+		async logout() {
+			this.$store.commit('auth/remove')
 		}
 	}
 }
